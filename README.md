@@ -162,7 +162,7 @@ Parameter
 | Parameter | Type | e.g. |
 | ------ | ------ | ------|
 | id | guid | b162e88d-a3a6-4341-87da-725658d743f3|
-| reason | string | |
+| reason | string(optional) | |
 
 Response: 202 Accepted | 400 Bad Request
 
