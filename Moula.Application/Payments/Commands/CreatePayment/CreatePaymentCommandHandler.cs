@@ -36,7 +36,7 @@ namespace Moula.Application.Payments.Commands.CreatePayment
                 Amount = request.Amount,
                 Comment = hasSufficientBalance ? "" : "Not enough funds",
                 CustomerId = _currentUser.UserId,
-                Date = DateTime.Now,
+                Date = request.Date,
                 Status = hasSufficientBalance ? PaymentStatus.Pending : PaymentStatus.Closed,
             };
 
