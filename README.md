@@ -64,8 +64,10 @@ Contains business-logic and types
 * Commands/Queries
 * Validators
 * Exceptions
-* Moula.Web.IntegrationTests
-* Moula.Web.UnitTests
+##### Moula.Web.IntegrationTests
+Contains integration tests.
+#####Moula.Web.UnitTests
+Contains unit tests.
 
 
 ## Getting Started
@@ -89,7 +91,7 @@ Follow these steps to get your development environment set up:
      ```
      dotnet build
      ```
-  4. Next, run unit and integration tests by running
+  4. Run unit and integration tests by running
       ```
      dotnet test
      ```
