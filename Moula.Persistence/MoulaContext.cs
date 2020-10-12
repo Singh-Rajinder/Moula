@@ -14,10 +14,14 @@ namespace Moula.Persistence
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken) => 
+        public Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken) =>
             Database.BeginTransactionAsync(cancellationToken);
 
         public void CommitTransaction() => Database.CommitTransaction();
         public void RollbackTransaction() => Database.RollbackTransaction();
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) =>
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MoulaContext).Assembly);
+
     }
 }
